@@ -1,8 +1,13 @@
 import { Injectable } from '@nestjs/common';
 
+export enum HealthStatus {
+    UP = 'UP',
+    DOWN = 'DOWN',
+}
+
 @Injectable()
 export class AppService {
-    getHello(): string {
-        return 'Hello World!';
+    getSimpleHealthCheck(): HealthStatus {
+        return HealthStatus.UP;
     }
 }
