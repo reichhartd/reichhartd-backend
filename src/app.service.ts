@@ -7,7 +7,7 @@ export enum HealthStatus {
 
 @Injectable()
 export class AppService {
-    getSimpleHealthCheck(): HealthStatus {
-        return HealthStatus.UP;
+    getSimpleHealthCheck() {
+        return { status: HealthStatus.UP };
     }
 }
